@@ -2,7 +2,7 @@ let password = document.getElementById("Password");
 let capitalLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let smallLetters = "abcdefghijklmnopqrstuvwxyz";
 let specialCharacters = "!@#$%-&/?_";
-let numbers = "1234567890"
+let numbers = "1234567890";
 
 const generatePassword = () => {
   let firstSmall = smallLetters.charAt(Math.round(Math.random() * 25));
@@ -20,30 +20,26 @@ const generatePassword = () => {
   let thirdSpecialChar = specialCharacters.charAt(
     Math.round(Math.random() * 9)
   );
-  let firstNumber = numbers.charAt(
-    Math.round(Math.random() * 9));
-  
-  let secondNumber = numbers.charAt(
-    Math.round(Math.random() * 9));
+  let firstNumber = numbers.charAt(Math.round(Math.random() * 9));
 
-    let thirdNumber = numbers.charAt(
-        Math.round(Math.random() * 9));
+  let secondNumber = numbers.charAt(Math.round(Math.random() * 9));
 
-        let fourthNumber = numbers.charAt(
-            Math.round(Math.random() * 9));
+  let thirdNumber = numbers.charAt(Math.round(Math.random() * 9));
+
+  let fourthNumber = numbers.charAt(Math.round(Math.random() * 9));
   const passwordGenerated =
     firstCapital +
     firstSmall +
     secondSmall +
     secondCapital +
-    firstNumber+
+    firstNumber +
     thirdSpecialChar +
     thirdCapital +
-    secondNumber+
+    secondNumber +
     secondSpecialChar +
     fourthCapital +
-    thirdNumber+
-    firstSpecialChar+
+    thirdNumber +
+    firstSpecialChar +
     fourthNumber;
   password.innerHTML = passwordGenerated;
 };
